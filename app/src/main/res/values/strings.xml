@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">HomeInHand</string>
+    <string name="butText_TurnBulb1On">Turn Bulb1 On</string>
+    <string name="butText_TurnBulb1Off">Turn Bulb1 Off</string>
+    <string name="tv_Info">TextView</string>
+    <string name="tv_info_text">Please provide the information about the device under configuration!!</string>
+    <string name="tv_UnitID_text">1. Remote Unit ID: </string>
+    <string name="tv_DevInUnit">2. Number of controllable devices in Unit: </string>
+    <string name="but_">Configure Remote Unit</string>
+    <string name="but_ConfigRemoteUnit_Txt">Configure Remote Unit</string>
+    <string name="but_ConfigText">Save Configuration</string>
+
+    <!-- Button: DisplayAvailableUnits-->
+    <string name="but_DisplayAvailableUnits_Txt">Available Remote Units</string>
+
+
+</resources>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="left"
+    android:orientation="vertical">
+
+     <TextView
+        android:id="@+id/tv_Info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_info_text"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingBottom="10dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_devID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:paddingTop="10dp"
+        android:text="@string/tv_UnitID_text" />
+
+    <EditText
+        android:id="@+id/in_UnitId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:textColorLink="@android:color/background_dark" />
+
+    <TextView
+        android:id="@+id/tv_DevInUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tv_DevInUnit"
+        android:textStyle="bold"
+        android:paddingTop="10dp"/>
+
+    <EditText
+        android:id="@+id/in_NoOdDevInUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:textColorLink="@android:color/background_dark" />
+
+    <Button
+        android:id="@+id/but_Config"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="SaveConfiguration_Cbk"
+        android:text="@string/but_ConfigText" />
+
+
+</LinearLayout>
