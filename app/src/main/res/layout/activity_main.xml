@@ -4,40 +4,57 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.burhanhassan.homeinhand.com.homeinhand.homeinhand.MainActivity">
+    tools:context="com.homeinhand.MainActivity">
 
     <Button
         android:id="@+id/but_Bulb1_On"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="296dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="119dp"
+        android:layout_marginEnd="247dp"
+        android:layout_marginRight="247dp"
+        android:layout_marginBottom="548dp"
         android:onClick="trunBulb1On"
-        android:text="@string/butText_TurnBulb1On"
+        android:text="@string/butText_TurnBulb1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.188"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/but_But1_Off"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="296dp"
+        android:layout_marginStart="63dp"
+        android:layout_marginLeft="63dp"
+        android:layout_marginTop="205dp"
+        android:layout_marginEnd="254dp"
+        android:layout_marginRight="254dp"
+        android:layout_marginBottom="463dp"
         android:onClick="trunBulb1Off"
-        android:text="@string/butText_TurnBulb1Off"
+        android:text="@string/butText_TurnBulb2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toEndOf="@+id/but_Bulb1_On" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imV_Bulb1"
-        android:layout_width="72dp"
-        android:layout_height="98dp"
+        android:layout_width="45dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="282dp"
+        android:layout_marginLeft="282dp"
+        android:layout_marginTop="119dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:layout_marginBottom="534dp"
         android:contentDescription="@string/but_"
-        app:layout_constraintBottom_toTopOf="@+id/but_Bulb1_On"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_bulb_off" />
@@ -46,38 +63,50 @@
         android:id="@+id/but_ConfigRemoteUnit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="640dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginRight="148dp"
+        android:layout_marginBottom="27dp"
         android:onClick="ConfigureRemoteUnit_Cbk"
         android:text="@string/but_ConfigRemoteUnit_Txt"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/but_Bulb1_On"
-        app:layout_constraintVertical_bias="0.924" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/but_DisplayAvailableUnits"
-        android:layout_width="193dp"
-        android:layout_height="53dp"
+        android:layout_width="202dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="573dp"
+        android:layout_marginEnd="149dp"
+        android:layout_marginRight="149dp"
+        android:layout_marginBottom="90dp"
         android:onClick="DisplayAvailableUnits_Cbk"
         android:text="@string/but_DisplayAvailableUnits_Txt"
-        app:layout_constraintBottom_toTopOf="@+id/but_ConfigRemoteUnit"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/but_Bulb1_On"
-        app:layout_constraintVertical_bias="0.86" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tV_AvailableUnits"
-        android:layout_width="307dp"
-        android:layout_height="121dp"
+        android:layout_width="300dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="474dp"
+        android:layout_marginBottom="170dp"
         android:textColor="@color/colorPrimaryDark"
         android:textColorLink="@android:color/background_dark"
-        app:layout_constraintBottom_toTopOf="@+id/but_DisplayAvailableUnits"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/but_Bulb1_On"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

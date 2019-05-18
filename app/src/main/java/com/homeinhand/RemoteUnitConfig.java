@@ -1,4 +1,4 @@
-package com.homeinhand.homeinhand;
+package com.homeinhand;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,8 +8,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
-
-import com.example.burhanhassan.homeinhand.R;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -36,23 +34,22 @@ public class RemoteUnitConfig extends Activity {
         String callingActivity_s = callingActivity.getExtras().getString("CallingActivity");
         FileName_s = callingActivity.getExtras().getString("InternalStorageFileName");
 
-        Log.i(TAG, "RemoteUnitConfig Recieved Data from MainActivity:" );
-        Log.i(TAG, "CallingActivity: " + callingActivity_s );
-        Log.i(TAG, "File Name " + FileName_s );
+        Log.i(TAG, "RemoteUnitConfig Recieved Data from MainActivity:");
+        Log.i(TAG, "CallingActivity: " + callingActivity_s);
+        Log.i(TAG, "File Name " + FileName_s);
 
     }
 
 
     /**
      * This function will gather following information from user, and save this in config file.
-     *
+     * <p>
      * UnitId_s : The id number of the remote unit, that will be controlled,
      * NoOfDevInUnit_i: Total number of controlable devices attached to Remote Unit.
-     *                  The devices may be lights, fans, or any other electric.
+     * The devices may be lights, fans, or any other electric.
      */
 
-    public void SaveConfiguration_Cbk (View v)
-    {
+    public void SaveConfiguration_Cbk(View v) {
         FileOutputStream fileoutputstream = null;
         /* Read Unit ID*/
         EditText UnitIdET = (EditText) findViewById(R.id.in_UnitId);
@@ -63,12 +60,11 @@ public class RemoteUnitConfig extends Activity {
         //String NoOfDevInUnit = String.valueOf(DevInUnitET.getText());
         int NoOfDevInUnit_i = Integer.valueOf(String.valueOf(DevInUnitET.getText()));
 
-        Log.i(TAG, "Remote Unit ID: " + UnitId_s );
-        Log.i(TAG, "No of Devices in Unit: " + NoOfDevInUnit_i );
+        Log.i(TAG, "Remote Unit ID: " + UnitId_s);
+        Log.i(TAG, "No of Devices in Unit: " + NoOfDevInUnit_i);
 
         /*Save the configuration in internal storage file FileName_s.*/
-        try
-        {
+        try {
             /*MODE_PRIVATE: No other application can access file.*/
             fileoutputstream = openFileOutput(FileName_s, MODE_APPEND);
 
@@ -76,27 +72,21 @@ public class RemoteUnitConfig extends Activity {
             fileoutputstream.write(UnitId_s.getBytes());
 
             /*Set Toast, and make it visible using show method.*/
-            Toast.makeText(getApplicationContext(), "Configuration Saved in "+ getFilesDir() + FileName_s + "!!!", Toast.LENGTH_LONG).show();
-        }
-        catch (FileNotFoundException e)
-        {
+            Toast.makeText(getApplicationContext(), "Configuration Saved in " + getFilesDir() + FileName_s + "!!!", Toast.LENGTH_LONG).show();
+        } catch (FileNotFoundException e) {
             /*File not found Exception*/
-            Log.i(TAG, "FileNotFoundEXception during opening file: " + FileName_s );
+            Log.i(TAG, "FileNotFoundEXception during opening file: " + FileName_s);
 
 
-        } catch (IOException e)
-        {
-            Log.i(TAG, "IOException during writing to file: " + FileName_s );
+        } catch (IOException e) {
+            Log.i(TAG, "IOException during writing to file: " + FileName_s);
             e.printStackTrace();
-        }
-        finally {
-            if (fileoutputstream!=null)
-            {
-                try
-                {
+        } finally {
+            if (fileoutputstream != null) {
+                try {
                     fileoutputstream.close();
                 } catch (IOException e) {
-                    Log.i(TAG, "IOException during closing file: " + FileName_s );
+                    Log.i(TAG, "IOException during closing file: " + FileName_s);
                     e.printStackTrace();
                 }
             }
@@ -109,7 +99,7 @@ public class RemoteUnitConfig extends Activity {
         setResult(RESULT_OK, returnDataToMainActivity);
 
 
-        Log.i(TAG, "RemoteUnitConfig work done. Giving Control back to MainActivity." );
+        Log.i(TAG, "RemoteUnitConfig work done. Giving Control back to MainActivity.");
         /* Work is completed in this activity. Close it, and pass control to MainActivity.*/
         finish();
     }

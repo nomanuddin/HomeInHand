@@ -1,11 +1,10 @@
-package com.homeinhand.homeinhand;
+package com.homeinhand;
 
 /**
  * Created by Burhan Hassan on 11/18/2018.
  */
 
-public class RemoteUnits
-{
+public class RemoteUnits {
     static final int MAX_DEVICES = 8;
 
     /*
@@ -19,15 +18,14 @@ public class RemoteUnits
     private String UnitId;
     private int NoOfDevicesInUnit;
 
-    private int[] DeviceState = new  int[MAX_DEVICES];
+    private int[] DeviceState = new int[MAX_DEVICES];
 
     /*Constructor*/
     public RemoteUnits() {
 
 
         /*Init DeviceState array.*/
-        for (int counter=0; counter<MAX_DEVICES; counter++)
-        {
+        for (int counter = 0; counter < MAX_DEVICES; counter++) {
             DeviceState[counter] = STATE_NOT_USED;
         }
     }

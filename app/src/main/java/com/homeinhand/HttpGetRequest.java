@@ -1,4 +1,4 @@
-package com.homeinhand.homeinhand;
+package com.homeinhand;
 
 import android.os.AsyncTask;
 import android.widget.Toast;
@@ -14,41 +14,35 @@ import java.net.URL;
  * Created by Burhan Hassan on 9/23/2018.
  */
 
-public class HttpGetRequest extends AsyncTask<String, String, String>
-{
-    public static final String REQUEST_METHOD = "GET";
-    public static final int READ_TIMEOUT = 1500;
-    public static final int CONNECTION_TIMEOUT = 1500;
-    String responseFromServer = "";
+public class HttpGetRequest extends AsyncTask<String, String, String> {
+    private static final String REQUEST_METHOD = "GET";
+    private static final int READ_TIMEOUT = 1500;
+    private static final int CONNECTION_TIMEOUT = 1500;
+    private String responseFromServer = "";
 
 
     @Override
-    protected String doInBackground(String... params){
+    protected String doInBackground(String... params) {
         String stringUrl = params[0];
         String result;
         String inputLine;
 
         //Create a URL object holding our url
         URL myUrl = null;
-        try
-        {
+        try {
             myUrl = new URL(stringUrl);
-        }
-        catch (MalformedURLException e) {
+        } catch (MalformedURLException e) {
             e.printStackTrace();
         }
         //Create a connection
         HttpURLConnection connection = null;
-        try
-        {
-            connection = (HttpURLConnection)myUrl.openConnection();
-        }
-        catch (IOException e) {
+        try {
+            connection = (HttpURLConnection) myUrl.openConnection();
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
-        try
-        {
+        try {
             //Set methods and timeouts
             connection.setRequestMethod(REQUEST_METHOD);
             connection.setReadTimeout(READ_TIMEOUT);
@@ -66,7 +60,7 @@ public class HttpGetRequest extends AsyncTask<String, String, String>
             StringBuilder stringBuilder = new StringBuilder();
 
             //Check if the line we are reading is not null
-            while((inputLine = reader.readLine()) != null){
+            while ((inputLine = reader.readLine()) != null) {
                 stringBuilder.append(inputLine);
             }
             //Close our InputStream and Buffered reader
@@ -74,9 +68,7 @@ public class HttpGetRequest extends AsyncTask<String, String, String>
             streamReader.close();
             //Set our result equal to our stringBuilder
             result = stringBuilder.toString();
-        }
-        catch(IOException e)
-        {
+        } catch (IOException e) {
             e.printStackTrace();
             result = null;
         }
@@ -85,16 +77,11 @@ public class HttpGetRequest extends AsyncTask<String, String, String>
     }
 
 
-
     @Override
-    protected void onPostExecute(String result)
-    {
-        if (responseFromServer == null)
-        {
+    protected void onPostExecute(String result) {
+        if (responseFromServer == null) {
             Toast.makeText(MainActivity.getAppContext(), "No Response From Server!!!", Toast.LENGTH_LONG).show();
-        }
-        else if(responseFromServer.contains("OK"))
-        {
+        } else if (responseFromServer.contains("OK")) {
             Toast.makeText(MainActivity.getAppContext(), "The Action is performed successfully!!!", Toast.LENGTH_LONG).show();
         }
     }

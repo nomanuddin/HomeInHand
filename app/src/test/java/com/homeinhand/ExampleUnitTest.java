@@ -1,4 +1,4 @@
-package com.example.burhanhassan.homeinhand;
+package com.homeinhand;
 
 import org.junit.Test;
 

@@ -1,15 +1,13 @@
-package com.homeinhand.homeinhand;
+package com.homeinhand;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.example.burhanhassan.homeinhand.R;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -50,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
         ret=sendRequestToServer("1");
 
         if(ret!=null) {
-            if (ret.contains("OK") == true) {
+            if (ret.contains("OK")) {
                 /*Update image : BulbOff*/
                 image.setImageResource(R.drawable.ic_bulb_on);
             }
@@ -67,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
         ret=sendRequestToServer("0");
 
         if(ret!=null) {
-            if (ret.contains("OK") == true) {
+            if (ret.contains("OK")) {
                 /*Update image : BulbOff*/
                 image.setImageResource(R.drawable.ic_bulb_off);
             }
@@ -76,23 +74,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    String sendRequestToServer(String req)
-    {
-        String uri = createUriREquestString(req);
-        Log.i(TAG, "createUriREquestString called." );
+    public String sendRequestToServer(String req) {
+        String uri = createUriRequestString(req);
+        Log.i(TAG, "createUriRequestString called.");
         String ret = null;
-        try
-        {
+        try {
             //Instantiate new instance of our class
             HttpGetRequest getRequest = new HttpGetRequest();
             //Perform the doInBackground method, passing in our url
             ret = getRequest.execute(uri).get();
-        }
-        catch (InterruptedException e) {
+        } catch (InterruptedException e) {
             e.printStackTrace();
             Log.e(TAG, e.getMessage(), e);
-        }
-        catch (ExecutionException e) {
+        } catch (ExecutionException e) {
             e.printStackTrace();
             Log.e(TAG, e.getMessage(), e);
         }
@@ -102,20 +96,20 @@ public class MainActivity extends AppCompatActivity {
 
 
     /*This API will create the complete Server Request, and return the Uri to caller.*/
-    public String createUriREquestString(String req){
+    public String createUriRequestString(String req) {
         String Uri;
         //http://192.168.0.18/?param1=1&param2=1
 
         Uri = serverUri;
         Uri = Uri + "?param1=1&param2=" + req;
-        Log.i(TAG, "Server URI STring created." + Uri );
+        Log.i(TAG, "Server URI STring created." + Uri);
 
         return Uri;
 
     }
     /* Callback for but_DisplayAvailableUnits*/
-    public void DisplayAvailableUnits_Cbk(View v)
-    {
+
+    public void DisplayAvailableUnits_Cbk(View v) {
         FileInputStream fileInputStream = null;
         TextView TextAvailableUnits;
         TextAvailableUnits = findViewById(R.id.tV_AvailableUnits);
@@ -127,8 +121,7 @@ public class MainActivity extends AppCompatActivity {
             StringBuilder sb = new StringBuilder();
             String text;
 
-            while ( (text = br.readLine()) != null)
-            {
+            while ((text = br.readLine()) != null) {
                 sb.append(text).append("\n");
             }
 
@@ -139,9 +132,8 @@ public class MainActivity extends AppCompatActivity {
         } catch (IOException e) {
             /*Esception during br.readline()*/
             e.printStackTrace();
-        }
-        finally {
-            if (fileInputStream != null){
+        } finally {
+            if (fileInputStream != null) {
                 try {
                     fileInputStream.close();
                 } catch (IOException e) {
@@ -154,13 +146,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /* Callback for but_ConfigRemoteUnit
-    * This method will call "RemoteUnitConfig" Activity.
-    * And send data File name of internal storage, to save configuration data.*/
-    public void ConfigureRemoteUnit_Cbk(View v)
-    {
+     * This method will call "RemoteUnitConfig" Activity.
+     * And send data File name of internal storage, to save configuration data.*/
+    public void ConfigureRemoteUnit_Cbk(View v) {
 
         Intent configRemoteUnit = new Intent(this,
-                                                RemoteUnitConfig.class);
+                RemoteUnitConfig.class);
 
         final int result = 1;
         configRemoteUnit.putExtra("CallingActivity", "MainActivity");
@@ -170,23 +161,18 @@ public class MainActivity extends AppCompatActivity {
 
     /*This method is executed when Activity "RemoteUnitConfig" is closed.*/
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data)
-    {
-        final int  SELECTOR_CONST = 1;
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        final int SELECTOR_CONST = 1;
 
         super.onActivityResult(requestCode, resultCode, data);
-        Log.i(TAG, "Return Recieved from RemoteUnitConfig.");
+        Log.i(TAG, "Return Received from RemoteUnitConfig.");
 
-        switch (requestCode)
-        {
-            case SELECTOR_CONST:
-                if (resultCode == RESULT_OK)
-                {
-                    String recUnitId = data.getExtras().getString("UnitID");
-                    Log.i(TAG, "Recieved UnitID from RemoteUnitConfig:");
-                    Log.i(TAG, recUnitId);
-                }
-                break;
+        if (requestCode == SELECTOR_CONST) {
+            if (resultCode == RESULT_OK) {
+                String recUnitId = data.getExtras().getString("UnitID");
+                Log.i(TAG, "Received UnitID from RemoteUnitConfig:");
+                Log.i(TAG, recUnitId);
+            }
         }
     }
 }
