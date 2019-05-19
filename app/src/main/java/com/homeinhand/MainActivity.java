@@ -1,14 +1,13 @@
 package com.homeinhand;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -18,53 +17,34 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.concurrent.ExecutionException;
 
-import static java.lang.Boolean.FALSE;
+import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 /*  To turn on Device connected to Relay one:
     http://192.168.0.18/?param1=1&param2=1*/
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
+    public static final String  BUTTON_MESSAGE = "";
     private static final String TAG = "MyApp";
     private static Context context;
     String serverUri = "http://192.168.0.18/";
-
-    Button btnBedroom1;
-    ImageButton imageButton2;
-    ImageButton imageButton3;
-    ImageButton imageButton4;
-    ImageButton imageButton5;
-    ImageButton imageButton6;
-    ImageButton imageButton7;
-    ImageButton imageButton8;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         MainActivity.context = getApplicationContext();
         setContentView(R.layout.activity_main);
-
-        btnBedroom1 = (Button) findViewById(R.id.be);
     }
 
     public static Context getAppContext() {
         return MainActivity.context;
 
     }
-
-    public void onClick(ImageButton imageButton) {
-
-//        switch (imageButton.getId()) {
-//            case R.id.imageButton1:
-//                imageButton1 = (ImageButton) findViewById(R.id.imageButton1);
-//                if (statusBulb1) {
-//                    imageButton1.setImageResource(R.drawable.ic_off_button);
-//                    statusBulb1 = false;
-//                    trunBulb1Off(imageButton);
-//                }
-
+    public void onClickButton(View view) {
+        Intent intent = new Intent(this, Room.class);
+        String message = String.valueOf(view.getId());
+        intent.putExtra(BUTTON_MESSAGE, message);
+        startActivity(intent);
     }
-
 
     /*  Function: trunBulb1On
         Description: This API will send the request to Client to turn the specific Bulb ON*/
