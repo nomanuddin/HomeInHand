@@ -50,7 +50,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/bedroom1"
+        android:id="@+id/light1"
         android:layout_width="180dp"
         android:layout_height="100dp"
         android:layout_marginTop="28dp"
@@ -67,7 +67,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bedroom2"
+        android:id="@+id/light2"
         style="@android:style/Widget.Button.Toggle"
         android:layout_width="180dp"
         android:layout_height="100dp"
@@ -85,7 +85,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/bedroom3"
+        android:id="@+id/light3"
         style="@android:style/Widget.Button.Toggle"
         android:layout_width="180dp"
         android:layout_height="100dp"
@@ -105,7 +105,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/dininghall"
+        android:id="@+id/light4"
         style="@android:style/Widget.Button.Toggle"
         android:layout_width="180dp"
         android:layout_height="100dp"
@@ -125,7 +125,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/tvloung"
+        android:id="@+id/fan1"
         style="@android:style/Widget.Button.Toggle"
         android:layout_width="180dp"
         android:layout_height="100dp"
@@ -145,7 +145,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/kitchen"
+        android:id="@+id/fan2"
         style="@android:style/Widget.Button.Toggle"
         android:layout_width="180dp"
         android:layout_height="100dp"
@@ -165,7 +165,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/carporch"
+        android:id="@+id/ac1"
         style="@android:style/Widget.Button.Toggle"
         android:layout_width="180dp"
         android:layout_height="100dp"
@@ -185,7 +185,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/terrace"
+        android:id="@+id/ac2"
         style="@android:style/Widget.Button.Toggle"
         android:layout_width="180dp"
         android:layout_height="100dp"
