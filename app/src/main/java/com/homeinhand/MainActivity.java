@@ -24,7 +24,6 @@ import static java.lang.Boolean.FALSE;
     http://192.168.0.18/?param1=1&param2=1*/
 
 public class MainActivity extends AppCompatActivity {
-
     private static final String TAG = "MyApp";
     private static Context context;
     String serverUri = "http://192.168.0.18/";
@@ -44,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         MainActivity.context = getApplicationContext();
         setContentView(R.layout.activity_main);
-
 
         btnBedroom1 = (Button) findViewById(R.id.be);
     }
