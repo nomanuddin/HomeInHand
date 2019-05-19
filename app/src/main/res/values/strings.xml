@@ -20,6 +20,23 @@
 
     <!-- Button: DisplayAvailableUnits-->
     <string name="but_DisplayAvailableUnits_Txt">Available Remote Units</string>
+    <string name="bedroom_1">Bedroom 1</string>
+    <string name="bedroom_2">Bedroom 2</string>
+    <string name="bedroom_3">Bedroom 3</string>
+    <string name="dining_hall">Dining Hall</string>
+    <string name="tv_lounge">TV Lounge</string>
+    <string name="kitchen">Kitchen</string>
+    <string name="car_porch">Car Porch</string>
+    <string name="terrace">Terrace</string>
+    <string name="light_1">Light 1</string>
+    <string name="light_2">Light 2</string>
+    <string name="light_3">Light 3</string>
+    <string name="light_4">Light 4</string>
+    <string name="fan_1">Fan 1</string>
+    <string name="fan_2">Fan 2</string>
+    <string name="ac_1">AC 1</string>
+    <string name="ac_2">AC 2</string>
+    <string name="bedroom_1">Bedroom 1</string>
 
 
 </resources>
