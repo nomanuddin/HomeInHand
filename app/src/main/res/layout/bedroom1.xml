@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="onClick"
+    tools:context="com.homeinhand.MainActivity">
+
+    <Button
+        android:id="@+id/insideBedroom1"
+        android:layout_width="410dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:text="Bedroom 1"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/bedroom1Light1"
+        android:layout_width="204dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="177dp"
+        android:layout_marginEnd="207dp"
+        android:layout_marginRight="207dp"
+        android:text="Light 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bedroom1Light2"
+        android:layout_width="204dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="327dp"
+        android:layout_marginEnd="207dp"
+        android:layout_marginRight="207dp"
+        android:text="Light 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bedroom1Light3"
+        android:layout_width="204dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="471dp"
+        android:layout_marginEnd="207dp"
+        android:layout_marginRight="207dp"
+        android:text="Light 3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bedroom1Fan1"
+        android:layout_width="204dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="207dp"
+        android:layout_marginLeft="207dp"
+        android:layout_marginTop="177dp"
+        android:text="Fan 1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bedroom1Fan2"
+        android:layout_width="204dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="207dp"
+        android:layout_marginLeft="207dp"
+        android:layout_marginTop="327dp"
+        android:text="Fan 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/airConditioner"
+        android:layout_width="204dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="207dp"
+        android:layout_marginLeft="207dp"
+        android:layout_marginTop="471dp"
+        android:text="Air Conditioner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

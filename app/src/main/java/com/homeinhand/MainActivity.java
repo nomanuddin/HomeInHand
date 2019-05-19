@@ -62,23 +62,23 @@ public class MainActivity extends AppCompatActivity {
         MainActivity.context = getApplicationContext();
         setContentView(R.layout.activity_main);
 
-        image1 = (ImageView) findViewById(R.id.imageView1);
-        image2 = (ImageView) findViewById(R.id.imageView2);
-        image3 = (ImageView) findViewById(R.id.imageView3);
-        image4 = (ImageView) findViewById(R.id.imageView4);
-        image5 = (ImageView) findViewById(R.id.imageView5);
-        image6 = (ImageView) findViewById(R.id.imageView6);
-        image7 = (ImageView) findViewById(R.id.imageView7);
-        image8 = (ImageView) findViewById(R.id.imageView8);
-
-        imageButton1 = (ImageButton) findViewById(R.id.imageButton1);
-        imageButton2 = (ImageButton) findViewById(R.id.imageButton2);
-        imageButton3 = (ImageButton) findViewById(R.id.imageButton3);
-        imageButton4 = (ImageButton) findViewById(R.id.imageButton4);
-        imageButton5 = (ImageButton) findViewById(R.id.imageButton5);
-        imageButton6 = (ImageButton) findViewById(R.id.imageButton6);
-        imageButton7 = (ImageButton) findViewById(R.id.imageButton7);
-        imageButton8 = (ImageButton) findViewById(R.id.imageButton8);
+//        image1 = (ImageView) findViewById(R.id.imageView1);
+//        image2 = (ImageView) findViewById(R.id.imageView2);
+//        image3 = (ImageView) findViewById(R.id.imageView3);
+//        image4 = (ImageView) findViewById(R.id.imageView4);
+//        image5 = (ImageView) findViewById(R.id.imageView5);
+//        image6 = (ImageView) findViewById(R.id.imageView6);
+//        image7 = (ImageView) findViewById(R.id.imageView7);
+//        image8 = (ImageView) findViewById(R.id.imageView8);
+//
+//        imageButton1 = (ImageButton) findViewById(R.id.imageButton1);
+//        imageButton2 = (ImageButton) findViewById(R.id.imageButton2);
+//        imageButton3 = (ImageButton) findViewById(R.id.imageButton3);
+//        imageButton4 = (ImageButton) findViewById(R.id.imageButton4);
+//        imageButton5 = (ImageButton) findViewById(R.id.imageButton5);
+//        imageButton6 = (ImageButton) findViewById(R.id.imageButton6);
+//        imageButton7 = (ImageButton) findViewById(R.id.imageButton7);
+//        imageButton8 = (ImageButton) findViewById(R.id.imageButton8);
     }
 
     public static Context getAppContext() {
@@ -88,96 +88,96 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClick(ImageButton imageButton) {
 
-        switch (imageButton.getId()) {
-            case R.id.imageButton1:
-                imageButton1 = (ImageButton) findViewById(R.id.imageButton1);
-                if (statusBulb1) {
-                    imageButton1.setImageResource(R.drawable.ic_off_button);
-                    statusBulb1 = false;
-                    trunBulb1Off(imageButton);
-                } else {
-                    imageButton1.setImageResource(R.drawable.ic_on_button);
-                    statusBulb1 = true;
-                    trunBulb1On(view);
-                }
-            case R.id.imageButton2:
-                imageButton2 = (ImageButton) findViewById(R.id.imageButton2);
-                if (statusBulb2) {
-                    imageButton2.setImageResource(R.drawable.ic_off_button);
-                    statusBulb2 = false;
-                    trunBulb1Off(imageButton);
-                } else {
-                    imageButton2.setImageResource(R.drawable.ic_on_button);
-                    statusBulb2 = true;
-                    trunBulb1On(imageButton);
-                }
-            case R.id.imageButton3:
-                imageButton3 = (ImageButton) findViewById(R.id.imageButton3);
-                if (statusBulb3) {
-                    imageButton3.setImageResource(R.drawable.ic_off_button);
-                    statusBulb3 = false;
-                    trunBulb1Off(imageButton);
-                } else {
-                    imageButton3.setImageResource(R.drawable.ic_on_button);
-                    statusBulb3 = true;
-                    trunBulb1On(imageButton);
-                }
-            case R.id.imageButton4:
-                imageButton4 = (ImageButton) findViewById(R.id.imageButton4);
-                if (statusBulb4) {
-                    imageButton4.setImageResource(R.drawable.ic_off_button);
-                    statusBulb4 = false;
-                    trunBulb1Off(imageButton);
-                } else {
-                    imageButton4.setImageResource(R.drawable.ic_on_button);
-                    statusBulb4 = true;
-                    trunBulb1On(imageButton);
-                }
-            case R.id.imageButton5:
-                imageButton5 = (ImageButton) findViewById(R.id.imageButton5);
-                if (statusBulb5) {
-                    imageButton5.setImageResource(R.drawable.ic_off_button);
-                    statusBulb5 = false;
-                    trunBulb1Off(imageButton);
-                } else {
-                    imageButton5.setImageResource(R.drawable.ic_on_button);
-                    statusBulb5 = true;
-                    trunBulb1On(imageButton);
-                }
-            case R.id.imageButton6:
-                imageButton6 = (ImageButton) findViewById(R.id.imageButton6);
-                if (statusBulb6) {
-                    imageButton6.setImageResource(R.drawable.ic_off_button);
-                    statusBulb6 = false;
-                    trunBulb1Off(imageButton);
-                } else {
-                    imageButton6.setImageResource(R.drawable.ic_on_button);
-                    statusBulb6 = true;
-                    trunBulb1On(imageButton);
-                }
-            case R.id.imageButton7:
-                imageButton7 = (ImageButton) findViewById(R.id.imageButton7);
-                if (statusBulb7) {
-                    imageButton7.setImageResource(R.drawable.ic_off_button);
-                    statusBulb7 = false;
-                    trunBulb1Off(imageButton);
-                } else {
-                    imageButton7.setImageResource(R.drawable.ic_on_button);
-                    statusBulb7 = true;
-                    trunBulb1On(imageButton);
-                }
-            case R.id.imageButton8:
-                imageButton8 = (ImageButton) findViewById(R.id.imageButton8);
-                if (statusBulb8) {
-                    imageButton8.setImageResource(R.drawable.ic_off_button);
-                    statusBulb8 = false;
-                    trunBulb1Off(imageButton);
-                } else {
-                    imageButton8.setImageResource(R.drawable.ic_on_button);
-                    statusBulb8 = true;
-                    trunBulb1On(imageButton);
-                }
-        }
+//        switch (imageButton.getId()) {
+//            case R.id.imageButton1:
+//                imageButton1 = (ImageButton) findViewById(R.id.imageButton1);
+//                if (statusBulb1) {
+//                    imageButton1.setImageResource(R.drawable.ic_off_button);
+//                    statusBulb1 = false;
+//                    trunBulb1Off(imageButton);
+//                } else {
+//                    imageButton1.setImageResource(R.drawable.ic_on_button);
+//                    statusBulb1 = true;
+//                    trunBulb1On(view);
+//                }
+//            case R.id.imageButton2:
+//                imageButton2 = (ImageButton) findViewById(R.id.imageButton2);
+//                if (statusBulb2) {
+//                    imageButton2.setImageResource(R.drawable.ic_off_button);
+//                    statusBulb2 = false;
+//                    trunBulb1Off(imageButton);
+//                } else {
+//                    imageButton2.setImageResource(R.drawable.ic_on_button);
+//                    statusBulb2 = true;
+//                    trunBulb1On(imageButton);
+//                }
+//            case R.id.imageButton3:
+//                imageButton3 = (ImageButton) findViewById(R.id.imageButton3);
+//                if (statusBulb3) {
+//                    imageButton3.setImageResource(R.drawable.ic_off_button);
+//                    statusBulb3 = false;
+//                    trunBulb1Off(imageButton);
+//                } else {
+//                    imageButton3.setImageResource(R.drawable.ic_on_button);
+//                    statusBulb3 = true;
+//                    trunBulb1On(imageButton);
+//                }
+//            case R.id.imageButton4:
+//                imageButton4 = (ImageButton) findViewById(R.id.imageButton4);
+//                if (statusBulb4) {
+//                    imageButton4.setImageResource(R.drawable.ic_off_button);
+//                    statusBulb4 = false;
+//                    trunBulb1Off(imageButton);
+//                } else {
+//                    imageButton4.setImageResource(R.drawable.ic_on_button);
+//                    statusBulb4 = true;
+//                    trunBulb1On(imageButton);
+//                }
+//            case R.id.imageButton5:
+//                imageButton5 = (ImageButton) findViewById(R.id.imageButton5);
+//                if (statusBulb5) {
+//                    imageButton5.setImageResource(R.drawable.ic_off_button);
+//                    statusBulb5 = false;
+//                    trunBulb1Off(imageButton);
+//                } else {
+//                    imageButton5.setImageResource(R.drawable.ic_on_button);
+//                    statusBulb5 = true;
+//                    trunBulb1On(imageButton);
+//                }
+//            case R.id.imageButton6:
+//                imageButton6 = (ImageButton) findViewById(R.id.imageButton6);
+//                if (statusBulb6) {
+//                    imageButton6.setImageResource(R.drawable.ic_off_button);
+//                    statusBulb6 = false;
+//                    trunBulb1Off(imageButton);
+//                } else {
+//                    imageButton6.setImageResource(R.drawable.ic_on_button);
+//                    statusBulb6 = true;
+//                    trunBulb1On(imageButton);
+//                }
+//            case R.id.imageButton7:
+//                imageButton7 = (ImageButton) findViewById(R.id.imageButton7);
+//                if (statusBulb7) {
+//                    imageButton7.setImageResource(R.drawable.ic_off_button);
+//                    statusBulb7 = false;
+//                    trunBulb1Off(imageButton);
+//                } else {
+//                    imageButton7.setImageResource(R.drawable.ic_on_button);
+//                    statusBulb7 = true;
+//                    trunBulb1On(imageButton);
+//                }
+//            case R.id.imageButton8:
+//                imageButton8 = (ImageButton) findViewById(R.id.imageButton8);
+//                if (statusBulb8) {
+//                    imageButton8.setImageResource(R.drawable.ic_off_button);
+//                    statusBulb8 = false;
+//                    trunBulb1Off(imageButton);
+//                } else {
+//                    imageButton8.setImageResource(R.drawable.ic_on_button);
+//                    statusBulb8 = true;
+//                    trunBulb1On(imageButton);
+//                }
+//        }
 
     }
 
