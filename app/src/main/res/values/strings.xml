@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Burhan Home Controller</string>
+    <string name="app_name">SMART</string>
 
     <string name="tv_Info">TextView</string>
     <string name="tv_info_text">Please provide the information about the device under configuration!!</string>
